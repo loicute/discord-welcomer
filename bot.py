@@ -1,10 +1,11 @@
-import discord
+import nextcord
+from nextcord.ext import commands
 import os
 
-intents = discord.Intents.default()
+intents = nextcord.Intents.default()
 intents.members = True
 
-bot = discord.Bot(intents=intents)
+bot = commands.Bot(intents=intents)
 
 WELCOME_CHANNEL_ID = 1490662368420692091
 
@@ -12,8 +13,8 @@ WELCOME_CHANNEL_ID = 1490662368420692091
 async def on_ready():
     print(f"logged in as {bot.user}")
     await bot.change_presence(
-        status=discord.Status.online,
-        activity=discord.Game(name="unknown's fixed mods froyo https://discord.gg/mXYkrMHVxP")
+        status=nextcord.Status.online,
+        activity=nextcord.Game(name="unknown's fixed mods froyo https://discord.gg/mXYkrMHVxP")
     )
 
 @bot.event
