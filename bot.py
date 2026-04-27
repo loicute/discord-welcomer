@@ -22,6 +22,6 @@ async def on_member_join(member):
     if channel is None:
         channel = await bot.fetch_channel(WELCOME_CHANNEL_ID)
     member_count = member.guild.member_count
-    await channel.send(f"welcome to ufm broyo {member.mention} you are member number {member_count} no cap")
+    await channel.send(f"welcome to UFM broyo {member.mention} you are member number {member_count}")
 
 bot.run(os.environ["DISCORD_TOKEN"])
